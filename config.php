@@ -7,7 +7,7 @@ mysqli_report(MYSQLI_REPORT_OFF);
 $host = "localhost";
 $user = "root";
 $pass = "";
-$db = "db_mhsapi";
+$db   = "db_mhsapi";
 
 $koneksi = @mysqli_connect($host, $user, $pass, $db);
 if (!$koneksi) {
@@ -17,4 +17,5 @@ if (!$koneksi) {
         null,
         500
     );
-} 
+}
+mysqli_set_charset($koneksi, "utf8mb4");
